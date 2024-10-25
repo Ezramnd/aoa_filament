@@ -26,7 +26,7 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->brandName('AOA')
+            ->brandName('Agent Of Agriculture')
             ->favicon(asset('images/favicon.ico'))
             ->login()
             ->colors([
