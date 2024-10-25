@@ -29,6 +29,7 @@ class AdminPanelProvider extends PanelProvider
             ->brandName('Agent Of Agriculture')
             ->favicon(asset('images/favicon.ico'))
             ->login()
+            ->sidebarCollapsibleOnDesktop()
             ->colors([
               'primary' => Color::Amber,
             ])
@@ -42,6 +43,9 @@ class AdminPanelProvider extends PanelProvider
             ->widgets([
                 Widgets\AccountWidget::class,
                 Widgets\FilamentInfoWidget::class,
+            ])
+            ->navigationGroups([
+                'Dashboard',
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -57,6 +61,5 @@ class AdminPanelProvider extends PanelProvider
             ->authMiddleware([
                 Authenticate::class,
             ]);
-
     }
 }
