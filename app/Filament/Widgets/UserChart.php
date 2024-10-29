@@ -8,10 +8,7 @@ class UserChart extends ChartWidget
 {
     protected static ?string $heading = 'User';
     protected static ?int $sort = 1;
-    protected function getColumns(): int | array
-{
-    return 5;
-}
+    protected static ?string $maxHeight = '300px';
 
     protected function getData(): array
     {
