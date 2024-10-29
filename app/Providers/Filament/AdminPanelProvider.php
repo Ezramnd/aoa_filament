@@ -17,6 +17,8 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
+use App\Filament\Widgets\WeatherWidget;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -29,7 +31,9 @@ class AdminPanelProvider extends PanelProvider
             ->brandName('Agent Of Agriculture')
             ->favicon(asset('images/favicon.ico'))
             ->login()
+            ->collapsibleNavigationGroups(true)
             ->sidebarCollapsibleOnDesktop()
+            ->sidebarWidth('')
             ->colors([
               'primary' => Color::Amber,
             ])
@@ -57,6 +61,12 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+            ])
+            ->plugins([
+                FilamentApexChartsPlugin::make()
+            ])
+            ->widgets([
+                WeatherWidget::class, // Daftarkan widget cuaca di sini
             ]);
     }
 }
