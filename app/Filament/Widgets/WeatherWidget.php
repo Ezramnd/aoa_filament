@@ -34,7 +34,10 @@ class WeatherWidget extends Widget
         return view('filament.widgets.weather', [
             'city' => $weather['name'],
             'temp' => $weather['main']['temp'],
+            'feels_like' => $weather['main']['feels_like'],
             'humidity' => $weather['main']['humidity'],
+            'wind_speed' => $weather['wind']['speed'],
+            'wind_deg' => $weather['wind']['deg'],
             'desc' => $weather['weather'][0]['description'],
             'icon' => $weather['weather'][0]['icon'],
         ]);

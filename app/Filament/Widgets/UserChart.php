@@ -27,5 +27,11 @@ class UserChart extends ChartWidget
     {
         return 'line';
     }
-    
+
+    protected function getHeaderWidgets(): array
+    {
+    return [
+        \App\Filament\Widgets\UserChart::class,
+    ];
+    }
 }

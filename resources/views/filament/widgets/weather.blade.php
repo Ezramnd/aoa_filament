@@ -5,10 +5,11 @@
                 <h2 class="text-lg font-bold">{{ $city }}</h2>
                 <div class="flex items-center space-x-2">
                     <img src="https://openweathermap.org/img/wn/{{ $icon }}.png" alt="Weather Icon">
-                    <p class="text-xl">{{ $temp }}°C</p>
+                    <p class="text-xl">{{ $temp }}°C (Feels like: {{ $feels_like }}°C)</p>
                 </div>
                 <p>{{ ucfirst($desc) }}</p>
-                <p>Humidity: {{ $humidity }}%</p> <!-- Menampilkan kelembaban -->
+                <p>Wind: {{ $wind_speed }} m/s, {{ $wind_deg }}°</p>
+                <p>Humidity: {{ $humidity }}%</p>
             </div>
         </div>
     </x-filament::section>
