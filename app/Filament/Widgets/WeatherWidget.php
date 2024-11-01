@@ -40,6 +40,7 @@ class WeatherWidget extends Widget
             'wind_deg' => $weather['wind']['deg'],
             'desc' => $weather['weather'][0]['description'],
             'icon' => $weather['weather'][0]['icon'],
+            'clouds' => $weather['clouds']['all'],
         ]);
     }
 }
