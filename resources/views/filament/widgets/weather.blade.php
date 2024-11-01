@@ -10,6 +10,7 @@
                 <p>{{ ucfirst($desc) }}</p>
                 <p>Wind: {{ $wind_speed }} m/s, {{ $wind_deg }}°</p>
                 <p>Humidity: {{ $humidity }}%</p>
+                <p>Clouds: {{ $clouds }}%</p>
             </div>
         </div>
     </x-filament::section>

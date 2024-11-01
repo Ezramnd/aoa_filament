@@ -10,8 +10,8 @@ class weather extends Page
 {
     protected static ?string $navigationIcon = 'heroicon-o-cloud';
     protected static ?string $navigationLabel = 'Weather';
-    protected static ?string $navigationGroup = 'Main Menu';
-    protected static ?int $navigationSort =1;
+    protected static ?string $navigationGroup = 'Monitoring';
+    protected static ?int $navigationSort = 1;
 
     protected static string $view = 'filament.pages.weather';
 
