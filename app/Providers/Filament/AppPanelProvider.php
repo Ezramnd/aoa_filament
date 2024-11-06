@@ -2,7 +2,6 @@
 
 namespace App\Providers\Filament;
 
-use App\Http\Middleware\VerifyIsAdmin;
 use Filament\Http\Middleware\Authenticate;
 use Filament\Http\Middleware\DisableBladeIconComponents;
 use Filament\Http\Middleware\DispatchServingFilamentEvent;
@@ -10,7 +9,10 @@ use Filament\Pages;
 use Filament\Panel;
 use Filament\PanelProvider;
 use Filament\Support\Colors\Color;
-use Filament\Widgets;
+use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
+use App\Filament\Pages\Weather;
+use App\Filament\Pages\Plant;
+use App\Filament\Pages\Spraying;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
 use Illuminate\Cookie\Middleware\EncryptCookies;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
@@ -18,46 +20,42 @@ use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
 use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
-use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
-use App\Filament\Widgets\WeatherWidget;
 use Filament\Navigation\MenuItem;
 
-class AdminPanelProvider extends PanelProvider
+
+class AppPanelProvider extends PanelProvider
 {
     public function panel(Panel $panel): Panel
     {
         return $panel
-            ->default()
-            ->id('admin')
-            ->path('admin')
+            ->id('app')
+            ->path('app')
             ->profile()
+            ->login()
+            ->brandName('AgriScan')
             ->userMenuItems([
                 MenuItem::make()
-                    ->label('Dashboard')
+                    ->label('Admin')
                     ->icon('heroicon-o-cog-6-tooth')
-                    ->url('/app')
+                    ->url('/admin')
+                    ->visible(fn (): bool => auth()->user()->is_admin)
             ])
             ->navigationGroups([
-                'Monitoring', 
-                'Settings', 
+                'Monitoring',
+                'Settings',
             ])
-            ->brandName('AgriScan')
-            ->favicon(asset('images/favicon.ico'))
-            // ->collapsibleNavigationGroups(true)
-            // ->sidebarCollapsibleOnDesktop()
             ->colors([
-              'primary' => Color::Amber,
+                'primary' => Color::Amber,
             ])
-            ->viteTheme('resources/css/filament/admin/theme.css')
-            ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
-            ->discoverPages(in: app_path('Filament/Pages'), for: 'App\\Filament\\Pages')
             ->pages([
                 Pages\Dashboard::class,
+                Weather::class,   // Tampilkan halaman Weather
+                Plant::class,     // Tampilkan halaman Plant
+                Spraying::class,  // Tampilkan halaman Spraying
             ])
             ->discoverWidgets(in: app_path('Filament/Widgets'), for: 'App\\Filament\\Widgets')
             ->widgets([
-                Widgets\AccountWidget::class,
-                Widgets\FilamentInfoWidget::class,
+                // Tambahkan widget yang diperlukan
             ])
             ->middleware([
                 EncryptCookies::class,
@@ -69,16 +67,12 @@ class AdminPanelProvider extends PanelProvider
                 SubstituteBindings::class,
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
-                VerifyIsAdmin::class
             ])
-            // ->authMiddleware([
-            //     Authenticate::class,
-            // ])
+            ->authMiddleware([
+                Authenticate::class,
+            ])
             ->plugins([
-                FilamentApexChartsPlugin::make()
-            ])
-            ->widgets([
-                WeatherWidget::class, // Daftarkan widget cuaca di sini
+                FilamentApexChartsPlugin::make(),
             ]);
     }
 }
