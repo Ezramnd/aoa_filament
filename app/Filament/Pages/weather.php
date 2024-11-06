@@ -3,8 +3,8 @@
 namespace App\Filament\Pages;
 
 use Filament\Pages\Page;
-use App\Filament\Widgets\GaugeChart11;
-use App\Filament\Widgets\WeatherWidget;
+use App\Filament\Resources\WeatherResource\Widgets\GaugeChart11;
+use App\Filament\Resources\WeatherResource\Widgets\WeatherWidget;
 
 class weather extends Page
 {

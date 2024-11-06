@@ -18,7 +18,7 @@ class Health extends ApexChartWidget
      *
      * @var string|null
      */
-    protected static ?string $heading = 'Health';
+    protected static ?string $heading = 'Kesehatan Tanaman';
 
     /**
      * Chart options (series, labels, types, size, animations...)
@@ -56,7 +56,7 @@ class Health extends ApexChartWidget
                 'lineCap'=> 'round'
             ],
             'series' => [44, 55, 67],
-            'labels' => ['Suhu( °)', 'Kelembaban(%)', 'pH tanah(pH)'],
+            'labels' => ['Suhu', 'Kelembaban', 'pH tanah'],
             'legend'=> [
                 'show'=> true,
                 'floating'=> true,
