@@ -46,7 +46,12 @@ class AdminPanelProvider extends PanelProvider
             // ->collapsibleNavigationGroups(true)
             // ->sidebarCollapsibleOnDesktop()
             ->colors([
-              'primary' => Color::Amber,
+                'primary' => Color::Amber,
+                'danger' => Color::Red,
+                'gray' => Color::Slate,
+                'info' => Color::Blue,
+                'success' => Color::Emerald,
+                'warning' => Color::Orange,
             ])
             ->viteTheme('resources/css/filament/admin/theme.css')
             ->discoverResources(in: app_path('Filament/Resources'), for: 'App\\Filament\\Resources')
@@ -76,9 +81,9 @@ class AdminPanelProvider extends PanelProvider
             // ])
             ->plugins([
                 FilamentApexChartsPlugin::make()
-            ])
-            ->widgets([
-                WeatherWidget::class, // Daftarkan widget cuaca di sini
             ]);
+            // ->widgets([
+            //     WeatherWidget::class, // Daftarkan widget cuaca di sini
+            // ]);
     }
 }

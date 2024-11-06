@@ -46,6 +46,11 @@ class AppPanelProvider extends PanelProvider
             ])
             ->colors([
                 'primary' => Color::Amber,
+                'danger' => Color::Red,
+                'gray' => Color::Slate,
+                'info' => Color::Blue,
+                'success' => Color::Emerald,
+                'warning' => Color::Orange,
             ])
             ->pages([
                 Pages\Dashboard::class,

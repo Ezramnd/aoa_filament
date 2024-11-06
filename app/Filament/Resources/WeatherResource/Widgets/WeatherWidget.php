@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Filament\Widgets;
+namespace App\Filament\Resources\WeatherResource\Widgets;
 
 use Filament\Widgets\Widget;
 use Illuminate\Support\Facades\Http;
