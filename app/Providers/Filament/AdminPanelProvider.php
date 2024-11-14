@@ -2,25 +2,27 @@
 
 namespace App\Providers\Filament;
 
-use App\Http\Middleware\VerifyIsAdmin;
-use Filament\Http\Middleware\Authenticate;
-use Filament\Http\Middleware\DisableBladeIconComponents;
-use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Filament\Pages;
 use Filament\Panel;
-use Filament\PanelProvider;
-use Filament\Support\Colors\Color;
 use Filament\Widgets;
-use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use Filament\PanelProvider;
+use Filament\Navigation\MenuItem;
+use Filament\Support\Colors\Color;
+use Filament\Pages\Auth\EditProfile;
+use App\Http\Middleware\VerifyIsAdmin;
+use App\Filament\Widgets\WeatherWidget;
+use Filament\Http\Middleware\Authenticate;
+use Illuminate\Session\Middleware\StartSession;
 use Illuminate\Cookie\Middleware\EncryptCookies;
-use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Illuminate\Routing\Middleware\SubstituteBindings;
 use Illuminate\Session\Middleware\AuthenticateSession;
-use Illuminate\Session\Middleware\StartSession;
 use Illuminate\View\Middleware\ShareErrorsFromSession;
+use Filament\Http\Middleware\DisableBladeIconComponents;
+use Filament\Http\Middleware\DispatchServingFilamentEvent;
+use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
-use App\Filament\Widgets\WeatherWidget;
-use Filament\Navigation\MenuItem;
+use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
+use App\Filament\Resources\CameraResource\Widgets\CameraWidget as WidgetsCameraWidget;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -30,12 +32,16 @@ class AdminPanelProvider extends PanelProvider
             ->default()
             ->id('admin')
             ->path('admin')
-            ->profile()
+            ->profile(EditProfile::class)
             ->userMenuItems([
                 MenuItem::make()
                     ->label('Dashboard')
                     ->icon('heroicon-o-cog-6-tooth')
-                    ->url('/app')
+                    ->url('/app'),
+                MenuItem::make()  // Tambahkan ini untuk tombol Home
+                    ->label('Home')
+                    ->icon('heroicon-o-home')  // Ikon untuk Home
+                    ->url('/')                // Arahkan ke halaman utama
             ])
             ->navigationGroups([
                 'Monitoring', 
