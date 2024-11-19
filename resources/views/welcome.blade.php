@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>Index - AgriScan Bootstrap Template</title>
+  <title>Home - AgriScan_Baper</title>
   <meta name="description" content="">
   <meta name="keywords" content="">
 
@@ -39,7 +39,7 @@
   <header id="header" class="header d-flex align-items-center fixed-top">
     <div class="container-fluid position-relative d-flex align-items-center justify-content-between">
 
-      <a href="index.html" class="logo d-flex align-items-center">
+      <a href="/" class="logo d-flex align-items-center">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.png" alt=""> -->
         <h1 class="sitename">AgriScan</h1>
@@ -88,7 +88,7 @@
         <div class="row justify-content-center">
           <div class="col-lg-8">
             <h2>Welcome to AgriScan</h2>
-            <p>We are team of talented designers making websites with Bootstrap</p>
+            <p>Kami adalah tim yang membantu Anda memantau dan menganalisis kondisi lahan serta tanaman dengan teknologi terkini</p>
             <a href="#contact" class="btn-get-started">Get Started</a>
             <a href="/app" class="btn-dashboard ms-2">Sign In</a>
           </div>
@@ -103,7 +103,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>About Us</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>AgriScan menyediakan solusi pemantauan agrikultur yang mendalam melalui penggunaan teknologi modern seperti pemetaan lahan, sensor kelembaban, dan analitik data untuk mengoptimalkan hasil pertanian Anda.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -113,19 +113,18 @@
             <img src="assets/img/about.jpg" class="img-fluid" alt="">
           </div>
           <div class="col-lg-6 content">
-            <h3>Voluptatem dignissimos provident</h3>
-            <p class="fst-italic">
+            <h3>Solusi Agrikultur yang Lebih Cerdas</h3>
+            {{-- <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
-            </p>
+            </p> --}}
             <ul>
-              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Duis aute irure dolor in reprehenderit in voluptate velit.</span></li>
-              <li><i class="bi bi-check2-all"></i> <span>Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate trideta storacalaperda mastiro dolore eu fugiat nulla pariatur.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Pemantauan lahan dan kondisi tanaman secara real-time.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Analisis data untuk meningkatkan produktivitas dan kualitas tanaman.</span></li>
+              <li><i class="bi bi-check2-all"></i> <span>Rekomendasi berbasis data untuk perawatan tanaman yang lebih baik.</span></li>
             </ul>
             <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
+              AgriScan menyediakan solusi pemantauan agrikultur yang mendalam melalui penggunaan teknologi modern seperti pemetaan lahan, sensor kelembaban, dan analitik data untuk mengoptimalkan hasil pertanian Anda.
             </p>
           </div>
         </div>
@@ -140,7 +139,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Why Us</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Mengapa memilih AgriScan? Kami menawarkan solusi komprehensif untuk pertanian modern, memastikan Anda mendapatkan data yang akurat dan dapat diandalkan untuk pengambilan keputusan yang lebih baik.</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -155,7 +154,7 @@
               </div>
               <h2 class="title"><a href="#" class="stretched-link">Our Mission</a></h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Memajukan pertanian dengan teknologi pemantauan yang inovatif.
               </p>
             </div>
           </div><!-- End Card Item -->
@@ -168,7 +167,7 @@
               </div>
               <h2 class="title"><a href="#" class="stretched-link">Our Plan</a></h2>
               <p>
-                Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+                Mengembangkan sistem pemantauan yang mudah digunakan oleh petani di seluruh dunia.
               </p>
             </div>
           </div><!-- End Card Item -->
@@ -181,7 +180,7 @@
               </div>
               <h2 class="title"><a href="#" class="stretched-link">Our Vision</a></h2>
               <p>
-                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+                Menjadi platform utama dalam monitoring agrikultur yang mendukung pertanian berkelanjutan.
               </p>
             </div>
           </div><!-- End Card Item -->
@@ -198,7 +197,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Services</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Layanan Kami</p>
       </div><!-- End Section Title -->
 
       <div class="container">
@@ -211,9 +210,9 @@
                 <i class="bi bi-activity"></i>
               </div>
               <a href="service-details.html" class="stretched-link">
-                <h3>Nesciunt Mete</h3>
+                <h3>Pemantauan Lahan</h3>
               </a>
-              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
+              <p>Layanan ini memungkinkan petani untuk memantau kesehatan tanaman dan kondisi tanah melalui sensor dan analisis data.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -223,9 +222,9 @@
                 <i class="bi bi-broadcast"></i>
               </div>
               <a href="service-details.html" class="stretched-link">
-                <h3>Eosle Commodi</h3>
+                <h3>Pemetaan Tanah</h3>
               </a>
-              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+              <p>Analisis topografi dan kelembaban tanah untuk pemahaman yang lebih baik mengenai kondisi lahan.</p>
             </div>
           </div><!-- End Service Item -->
 
@@ -235,51 +234,11 @@
                 <i class="bi bi-easel"></i>
               </div>
               <a href="service-details.html" class="stretched-link">
-                <h3>Ledo Markt</h3>
+                <h3>Analitik Data Pertanian</h3>
               </a>
-              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+              <p>Penggunaan data untuk menganalisis pola pertumbuhan tanaman, mengidentifikasi masalah, dan mengoptimalkan strategi pemupukan.</p>
             </div>
           </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-bounding-box-circles"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Asperiores Commodit</h3>
-              </a>
-              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-calendar4-week"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Velit Doloremque</h3>
-              </a>
-              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative">
-              <div class="icon">
-                <i class="bi bi-chat-square-text"></i>
-              </div>
-              <a href="service-details.html" class="stretched-link">
-                <h3>Dolori Architecto</h3>
-              </a>
-              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
-              <a href="service-details.html" class="stretched-link"></a>
-            </div>
-          </div><!-- End Service Item -->
-
         </div>
 
       </div>
@@ -292,7 +251,7 @@
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
         <h2>Contact Us</h2>
-        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <p>Anda tertarik untuk meningkatkan produktivitas lahan dengan pemantauan agrikultur modern? Daftar sekarang di AgriScan untuk mengakses berbagai fitur pemantauan, pemetaan, dan analitik yang dirancang khusus untuk mendukung keberhasilan usaha pertanian Anda. Hubungi kami melalui form di bawah ini atau langsung kirim pesan untuk memulai perjalanan Anda bersama AgriScan.</p>
       </div><!-- End Section Title -->
 
       <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -303,7 +262,7 @@
             <div class="info-item d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-geo-alt"></i>
               <h3>Address</h3>
-              <p>A108 Adam Street, New York, NY 535022</p>
+              <p>Jl. Kumbang No.14, RT.02/RW.06</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -311,7 +270,7 @@
             <div class="info-item d-flex flex-column justify-content-center align-items-center info-item-borders">
               <i class="bi bi-telephone"></i>
               <h3>Call Us</h3>
-              <p>+1 5589 55488 55</p>
+              <p>+62 812 3456 7890</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -319,7 +278,7 @@
             <div class="info-item d-flex flex-column justify-content-center align-items-center">
               <i class="bi bi-envelope"></i>
               <h3>Email Us</h3>
-              <p>info@example.com</p>
+              <p>baper@example.com</p>
             </div>
           </div><!-- End Info Item -->
 
@@ -364,7 +323,7 @@
   <footer id="footer" class="footer light-background">
     <div class="container">
       <h3 class="sitename">AgriScan</h3>
-      <p>Et aut eum quis fuga eos sunt ipsa nihil. Labore corporis magni eligendi fuga maxime saepe commodi placeat.</p>
+      <p>AgriScan hadir untuk menyediakan solusi monitoring agrikultur yang dapat diandalkan dan berbasis teknologi, membantu petani mengoptimalkan produktivitas lahan mereka.</p>
       <div class="social-links d-flex justify-content-center">
         <a href=""><i class="bi bi-twitter-x"></i></a>
         <a href=""><i class="bi bi-facebook"></i></a>

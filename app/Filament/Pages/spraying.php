@@ -4,6 +4,7 @@ namespace App\Filament\Pages;
 
 use Filament\Pages\Page;
 use App\Filament\Resources\SprayingResource\Widgets\TankBar;
+use App\Filament\Resources\SprayingResource\Widgets\SprayHistoryWidget;
 
 class spraying extends Page
 {
@@ -18,6 +19,7 @@ class spraying extends Page
     {
         return [
             TankBar::class,
+            SprayHistoryWidget::class,
         ];
     }
 }
