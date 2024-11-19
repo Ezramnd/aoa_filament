@@ -15,6 +15,7 @@ use App\Filament\Resources\DeviceResource\Pages;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use App\Filament\Resources\DeviceResource\RelationManagers;
 
+
 class DeviceResource extends Resource
 {
     protected static ?string $model = Device::class;
