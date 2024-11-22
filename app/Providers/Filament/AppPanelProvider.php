@@ -33,7 +33,7 @@ class AppPanelProvider extends PanelProvider
             ->path('app')
             ->profile()
             ->login()
-            ->brandName('AgriScan')
+            ->brandName('Agent Of Agriculture')
             ->userMenuItems([
                 MenuItem::make()
                     ->label('Admin')
