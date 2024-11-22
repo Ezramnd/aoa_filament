@@ -9,6 +9,7 @@ use Filament\PanelProvider;
 use Filament\Navigation\MenuItem;
 use Filament\Support\Colors\Color;
 use Filament\Pages\Auth\EditProfile;
+use App\Filament\Widgets\CameraWidget;
 use App\Http\Middleware\VerifyIsAdmin;
 use App\Filament\Widgets\WeatherWidget;
 use Filament\Http\Middleware\Authenticate;
@@ -47,7 +48,7 @@ class AdminPanelProvider extends PanelProvider
                 'Monitoring', 
                 'Settings', 
             ])
-            ->brandName('AgriScan')
+            ->brandName('Agent Of Agriculture')
             ->favicon(asset('images/favicon.ico'))
             // ->collapsibleNavigationGroups(true)
             // ->sidebarCollapsibleOnDesktop()
@@ -87,9 +88,10 @@ class AdminPanelProvider extends PanelProvider
             // ])
             ->plugins([
                 FilamentApexChartsPlugin::make()
+            ])
+            ->widgets([
+                CameraWidget::class, // Daftarkan widget cuaca di sini
             ]);
-            // ->widgets([
-            //     WeatherWidget::class, // Daftarkan widget cuaca di sini
-            // ]);
+            
     }
 }
