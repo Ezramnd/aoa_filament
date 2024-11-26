@@ -12,6 +12,6 @@ class SprayHistory extends Model
     protected $fillable = [
         'date',
         'category',
-        'active_sensor',
+        'status',
     ];
 }
