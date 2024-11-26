@@ -23,7 +23,7 @@ class SprayHistoryWidget extends BaseWidget
         return [
             \Filament\Tables\Columns\TextColumn::make('date')->label('Date'),
             \Filament\Tables\Columns\TextColumn::make('category')->label('Category'),
-            \Filament\Tables\Columns\TextColumn::make('active_sensor')
+            \Filament\Tables\Columns\TextColumn::make('status')
             ->label('Active Sensor')
             ->formatStateUsing(fn ($state) => $state === 1 ? 'ON' : 'OFF'), // Ubah status 1/0 menjadi ON/OFF
 
@@ -37,7 +37,7 @@ class SprayHistoryWidget extends BaseWidget
                 ExcelExport::make()->withColumns([
                     Column::make('date'),
                     Column::make('category'),
-                    Column::make('active_sensor'),
+                    Column::make('status'),
                 ]),
             ])
         ];

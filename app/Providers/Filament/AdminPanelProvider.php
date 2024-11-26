@@ -9,7 +9,6 @@ use Filament\PanelProvider;
 use Filament\Navigation\MenuItem;
 use Filament\Support\Colors\Color;
 use Filament\Pages\Auth\EditProfile;
-use App\Filament\Widgets\CameraWidget;
 use App\Http\Middleware\VerifyIsAdmin;
 use App\Filament\Widgets\WeatherWidget;
 use Filament\Http\Middleware\Authenticate;
@@ -23,7 +22,6 @@ use Filament\Http\Middleware\DispatchServingFilamentEvent;
 use Illuminate\Foundation\Http\Middleware\VerifyCsrfToken;
 use Leandrocfe\FilamentApexCharts\FilamentApexChartsPlugin;
 use Illuminate\Cookie\Middleware\AddQueuedCookiesToResponse;
-use App\Filament\Resources\CameraResource\Widgets\CameraWidget as WidgetsCameraWidget;
 
 class AdminPanelProvider extends PanelProvider
 {
@@ -48,7 +46,7 @@ class AdminPanelProvider extends PanelProvider
                 'Monitoring', 
                 'Settings', 
             ])
-            ->brandName('Agent Of Agriculture')
+            ->brandName('Agriscan')
             ->favicon(asset('images/favicon.ico'))
             // ->collapsibleNavigationGroups(true)
             // ->sidebarCollapsibleOnDesktop()
@@ -88,9 +86,6 @@ class AdminPanelProvider extends PanelProvider
             // ])
             ->plugins([
                 FilamentApexChartsPlugin::make()
-            ])
-            ->widgets([
-                CameraWidget::class, // Daftarkan widget cuaca di sini
             ]);
             
     }
